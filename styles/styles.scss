@@ -1383,9 +1383,6 @@ $media-breakpoint-xl: 1200px;
     }
 
     .es-design {
-      &__single-subtitle {
-        // min-height: 150px;
-      }
 
       &__container {
         &--desktop {
@@ -1398,7 +1395,6 @@ $media-breakpoint-xl: 1200px;
 
         &--1 {
           max-width: 230px;
-          // margin-right: -260px;
         }
 
         &--2 {
