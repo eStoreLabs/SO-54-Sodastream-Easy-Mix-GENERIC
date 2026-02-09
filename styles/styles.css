@@ -29,6 +29,7 @@
   margin: auto;
   container: es-rc-content/inline-size;
   overflow: hidden;
+  font-variant-ligatures: none;
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #012349;
@@ -54,6 +55,23 @@
 }
 #es-rc #es-rc-content .es-section {
   padding: 32px;
+}
+#es-rc #es-rc-content .es-tm {
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: top;
+  margin-top: 5px;
+}
+#es-rc #es-rc-content .es-tm-headline {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: top;
+  margin-top: 5px;
+}
+@container es-rc-content (min-width: 800px) {
+  #es-rc #es-rc-content .es-tm-headline {
+    font-size: 32px;
+  }
 }
 #es-rc #es-rc-content .es-section-title {
   font-weight: 700;
@@ -645,6 +663,7 @@
 }
 #es-rc #es-rc-content .es-footer__logo-wrapper {
   background-color: #002349;
+  padding-bottom: 10px;
 }
 @media screen and (min-width: 676px) {
   #es-rc #es-rc-content .es-kv {

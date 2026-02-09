@@ -65,6 +65,7 @@ $media-breakpoint-xl: 1200px;
   margin: auto;
   container: es-rc-content / inline-size;
   overflow: hidden;
+  font-variant-ligatures: none;
 
   ::-moz-selection {
     background-color: $color-main;
@@ -98,6 +99,24 @@ $media-breakpoint-xl: 1200px;
 
   .es-section {
     padding: $px-XL;
+  }
+
+  .es-tm {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+    margin-top: 5px;
+  }
+
+  .es-tm-headline {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: top;
+    margin-top: 5px;
+
+    @container es-rc-content (min-width: 800px) {
+      font-size: 32px;
+    }
   }
 
   .es-section-title {
@@ -900,6 +919,7 @@ $media-breakpoint-xl: 1200px;
 
     &__logo-wrapper {
       background-color: $color-dark-bg;
+      padding-bottom: 10px;
     }
   }
 
