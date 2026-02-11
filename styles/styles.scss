@@ -287,7 +287,7 @@ $media-breakpoint-xl: 1200px;
         width: 100%;
         padding-left: 40px;
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 70px;
       }
 
       &__logo {
@@ -909,7 +909,20 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__inner {
-      margin-top: 230px;
+      margin-top: -50px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 140%;
+        height: 400px;
+        background-color: $color-dark-bg;
+        border-radius: 50%;
+        bottom: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
     }
 
     &__logo-wrapper {
@@ -927,6 +940,16 @@ $media-breakpoint-xl: 1200px;
 
       &__wrapper {
         right: -155px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .es-footer {
+      &__inner {
+        &::before {
+          bottom: -25%;
+        }
       }
     }
   }
@@ -972,22 +995,29 @@ $media-breakpoint-xl: 1200px;
         }
       }
     }
+
+    .es-footer {
+      &__inner {
+        &::before {
+          bottom: -25%;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
     .es-kv {
-      padding-bottom: 145px;
 
       &__packshot {
         position: absolute;
-        top: -160px;
+        top: -190px;
         right: -30.5%;
       }
 
       &__title-circle {
         position: absolute;
-        bottom: 5%;
-        right: 45%;
+        bottom: -2.4%;
+        right: 77.3%;
         z-index: 3;
       }
 
@@ -1226,14 +1256,25 @@ $media-breakpoint-xl: 1200px;
     }
 
     .es-footer {
+      background-image: url('../images/bottles-d.png');
+      background-size: cover;
+      background-repeat: no-repeat;
       background-color: $color-bg;
-      min-height: 500px;
+      min-height: 530px;
 
       &__inner {
-        margin-top: 260px;
+        margin-top: 280px;
         max-width: 85%;
         margin-left: auto;
         margin-right: auto;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &__bottles {
+        display: none;
       }
     }
   }
@@ -1258,7 +1299,7 @@ $media-breakpoint-xl: 1200px;
       &__title-circle {
         bottom: -3%;
         right: revert;
-        left: 0;
+        left: -18px;
       }
     }
 

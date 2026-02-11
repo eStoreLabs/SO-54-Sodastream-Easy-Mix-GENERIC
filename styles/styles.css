@@ -203,7 +203,7 @@
     width: 100%;
     padding-left: 40px;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 70px;
   }
   #es-rc #es-rc-content .es-kv__logo {
     margin: 0;
@@ -654,7 +654,18 @@
   z-index: 3;
 }
 #es-rc #es-rc-content .es-footer__inner {
-  margin-top: 230px;
+  margin-top: -50px;
+}
+#es-rc #es-rc-content .es-footer__inner::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 400px;
+  background-color: #002349;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #es-rc #es-rc-content .es-footer__logo-wrapper {
   background-color: #002349;
@@ -666,6 +677,11 @@
   }
   #es-rc #es-rc-content .es-style__wrapper {
     right: -155px;
+  }
+}
+@media screen and (min-width: 600px) {
+  #es-rc #es-rc-content .es-footer__inner::before {
+    bottom: -25%;
   }
 }
 @media screen and (min-width: 676px) {
@@ -701,20 +717,20 @@
   #es-rc #es-rc-content .es-kv__packshot__img--desktop {
     display: block;
   }
+  #es-rc #es-rc-content .es-footer__inner::before {
+    bottom: -25%;
+  }
 }
 @media screen and (min-width: 768px) {
-  #es-rc #es-rc-content .es-kv {
-    padding-bottom: 145px;
-  }
   #es-rc #es-rc-content .es-kv__packshot {
     position: absolute;
-    top: -160px;
+    top: -190px;
     right: -30.5%;
   }
   #es-rc #es-rc-content .es-kv__title-circle {
     position: absolute;
-    bottom: 5%;
-    right: 45%;
+    bottom: -2.4%;
+    right: 77.3%;
     z-index: 3;
   }
   #es-rc #es-rc-content .es-kv__packshot__img {
@@ -891,14 +907,23 @@
     max-width: 200px;
   }
   #es-rc #es-rc-content .es-footer {
+    background-image: url("../images/bottles-d.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #faf8f8;
-    min-height: 500px;
+    min-height: 530px;
   }
   #es-rc #es-rc-content .es-footer__inner {
-    margin-top: 260px;
+    margin-top: 280px;
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  #es-rc #es-rc-content .es-footer__inner::before {
+    display: none;
+  }
+  #es-rc #es-rc-content .es-footer__bottles {
+    display: none;
   }
 }
 @media screen and (min-width: 800px) {
@@ -915,7 +940,7 @@
   #es-rc #es-rc-content .es-kv__title-circle {
     bottom: -3%;
     right: revert;
-    left: 0;
+    left: -18px;
   }
   #es-rc #es-rc-content .es-design__container--desktop {
     row-gap: 88px;
